@@ -1,0 +1,6 @@
+{
+    "newrites": [
+    {"source":"/(.*}", "destination": "/"}
+    ]
+
+}

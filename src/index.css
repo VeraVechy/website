@@ -1,0 +1,170 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
+
+body {
+    font-family: Lato;
+}
+
+
+.btn-danger{
+    background-color: #E71800 !important;
+  }
+  
+  .text-danger{
+    color: #E71800 !important;
+  }
+
+  .under{
+    border-radius: 8px;
+    background: #E71800;
+    width: 180px;
+    height: 6px;
+    flex-shrink: 0;
+    margin: 0 auto;
+  }
+
+  .bg-footer{
+    background-color: rgb(0, 0, 0, 0.8);
+    padding-top: 20px;
+  }
+  
+
+  h1 {
+    font-size: 48px;
+    font-weight: 700;
+  }
+  
+  h2{
+    font-size: 32px;
+    font-weight: 600;
+  }
+  
+ 
+.hero {
+    background-image:linear-gradient(0deg, rgba(4, 4, 4, 0.3) 0%, rgba(0, 0, 0, 0.30) 100%), url('./assets/About/bg.jpg');
+    height: 500px;
+    background-position: center;
+    background-size: cover;
+}
+
+.row{
+  text-align:left;
+  justify-content: center;
+  /* padding: 10px; */
+}
+
+.cover{
+  background:linear-gradient(0deg, rgba(4, 4, 4, 0.5) 0%, rgba(0, 0, 0, 0.30) 100%), url('../src/assets/Serv/bgg.jpg');
+  height: 196px;
+  background-position: cover;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.bg-primary {
+  background-color: rgb(175, 14, 175) !important;
+}
+
+  .message {
+    width: 621px;
+    height: 190px;
+    flex-shrink: 0;
+    border-radius: 8px;
+    border: 1px solid #515151;
+    padding-left: 10px;
+    padding-top: 10px;
+}
+
+
+.form-control{
+  width: 300px;
+  height: 50px;
+  flex-shrink: 0;
+  border-radius: 8px;
+  border: 1px solid #515151;
+  padding-left: 10px;
+}
+
+.form{
+  display: flex;
+  width: 621px;
+  align-items: flex-start;
+  align-content: flex-start;
+  gap: 20px 21px;
+  flex-wrap: wrap;
+}
+
+
+.footer-logistic {
+  background: #000;
+  color: #fff;
+}
+
+.container-footer {
+  padding: 7px;
+}
+
+
+
+.col-span,
+li {
+  align-items: center;
+  list-style: none;
+  margin-top: 12px;
+}
+
+.col-span {
+  padding: 20px;
+}
+
+.flexing {
+  display: inline-flex;
+  gap: 12px;
+  margin-bottom: 20px;
+}
+
+.max {
+  max-width: 140px;
+  height: 92.787px;
+  flex-shrink: 0;
+}
+
+.mt-5 {
+  margin-top: 12px;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.bt {
+  margin-top: 20px;
+}
+
+
+.right {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;  /* This sets the gap between child elements */
+}
+
+
+
+.rows {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+
+
+.submit{
+  display: flex;
+  width: 153px;
+  padding: 15px 51px 14px 52px;
+  justify-content: center;
+  align-items: center;
+  flex-shrink: 0;
+  border-radius: 8px;
+  background: #E71800;
+  border:none;
+  cursor: pointer;
+  color: #fff;
+}

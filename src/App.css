@@ -1,0 +1,106 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
+body{
+    font-family: "Lato", sans-serif;
+}
+.btn-danger{
+    background-color:#E71800 !important;
+    border: none !important;
+}
+.bg-image{
+    background: url('../src/assets/hero.png');
+    height: 551px;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+h2{
+    font-size: 32px;
+    font-weight: 600;
+}
+.bg-red{
+    background-color: #E71800 !important;
+    width: 180px;
+    height: 6px;
+    border-radius: 8px;
+    /* margin: 0 auto; */
+}
+.text-danger{
+    color: #E71800 !important;
+}
+.cover{
+    background: url('../src/assets/cover.png');
+    height: 196px;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+
+
+
+/* Basic styling for footer */
+footer {
+    background-color: #333;
+    color: #fff;
+    padding: 20px 0;
+  }
+  
+  /* Styling for logo */
+  .footer__logo img {
+    width: 100px; /* Adjust width as needed */
+  }
+  
+  /* Styling for quick links */
+  .footer__quick-links ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .footer__quick-links li {
+    display: inline-block;
+    margin-right: 20px;
+  }
+  
+  .footer__quick-links a {
+    color: #fff;
+    text-decoration: none;
+  }
+  
+  /* Styling for social media icons */
+  .footer__social-media ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .footer__social-media li {
+    display: inline-block;
+    margin-right: 10px;
+  }
+  
+  .footer__social-media a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 20px;
+  }
+  
+  /* Styling for subscribe form */
+  .footer__subscribe form {
+    display: flex;
+  }
+  
+  .footer__subscribe input[type="email"] {
+    padding: 10px;
+    border: none;
+    border-radius: 5px 0 0 5px;
+  }
+  
+  .footer__subscribe button {
+    padding: 10px 20px;
+    background-color: #ff4500;
+    color: #fff;
+    border: none;
+    border-radius: 0 5px 5px 0;
+    cursor: pointer;
+  }
+  
+  .footer__subscribe button:hover {
+    background-color: #ff6347;
+  }  
