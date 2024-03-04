@@ -7,6 +7,7 @@ body {
 
 .btn-danger{
     background-color: #E71800 !important;
+    border: none !important;
   }
   
   .text-danger{
@@ -46,11 +47,11 @@ body {
     background-size: cover;
 }
 
-.row{
+/* .row{
   text-align:left;
   justify-content: center;
-  /* padding: 10px; */
-}
+  padding: 10px;
+} */
 
 .cover{
   background:linear-gradient(0deg, rgba(4, 4, 4, 0.5) 0%, rgba(0, 0, 0, 0.30) 100%), url('../src/assets/Serv/bgg.jpg');
@@ -75,7 +76,7 @@ body {
 }
 
 
-.form-control{
+/* .form-control{
   width: 300px;
   height: 50px;
   flex-shrink: 0;
@@ -145,14 +146,14 @@ li {
   display: flex;
   flex-direction: column;
   gap: 20px;  /* This sets the gap between child elements */
-}
+/* } */ */
 
 
 
-.rows {
+/* .rows {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
-}
+} */
 
 
 .submit{

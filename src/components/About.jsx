@@ -58,32 +58,27 @@ const settings = {
         </div>
       </div>
 
-      <div className='text-center'>
-      <div className='ab text-center' data-aos='fade-up'>
-        <h2 className='pt-4'>Welcome To Vechy Graphix</h2>
-        <div className="under mt-3 ml-0"></div>
-        <p className='mt-3'> Reliable And Affordable Epicenter For Quality And Excellent Designs</p>
+      <div className='container'>
+      <div className='text-center' data-aos='fade-up'>
+        <h2 className='pt-5'>Welcome To Vechy Graphix</h2>
+        <div className="under mx-auto"></div>
+        <p> Reliable And Affordable Epicenter For Quality And Excellent Designs</p>
       </div>
 
-      <div className='d-flex pt-3'>
-      <div className="row">
+      <div className="container d-flex">
+      <div className="row mt-5">
       <div className="col-md-6" data-aos="fade-up">
           <img src={Us} className="rounded mb-5" alt="About" />
           </div>
           </div>
 
-        <div className=''>
-        <div className="row">
+        
         <div className="col-md-6" data-aos="fade-up">
-          <div className='vech'>
           <p className='text-danger'>CREATIVE DESIGN COMPANY</p>
           <h2>Graphic Designs, Branding, Consultations, And More</h2>
           <p>Our vision is rooted in the belief that every brand has a story worth telling, and it's our mission to bring those stories to life with authenticity, passion, and unparalleled creativity. We envision a future where design transcends mere aesthetics, where it becomes a catalyst for meaningful connection and positive change. Through our dedication to excellence and our relentless pursuit of innovation, we aim to empower brands to make a lasting impact in the world, one pixel at a time.</p>
           <a href="/services" className="btn btn-danger">Discover more</a>
           </div>
-        </div>
-        </div>
-        </div>
         </div>
         </div>
 
