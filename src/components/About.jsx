@@ -50,7 +50,7 @@ const settings = {
   return (
     <>
       <div className="hero">
-        <div className="container text-center text-light pt-5">
+        <div className="container text-center text-light pt-5" data-aos='bounce-in'>
         <h1 className='mt-5 pt-5'>
         Your Creative Hub
         </h1>
@@ -59,7 +59,7 @@ const settings = {
       </div>
 
       <div className='text-center'>
-      <div className='ab text-center'>
+      <div className='ab text-center' data-aos='fade-up'>
         <h2 className='pt-4'>Welcome To Vechy Graphix</h2>
         <div className="under mt-3 ml-0"></div>
         <p className='mt-3'> Reliable And Affordable Epicenter For Quality And Excellent Designs</p>
@@ -72,7 +72,7 @@ const settings = {
           </div>
           </div>
 
-        
+        <div className=''>
         <div className="row">
         <div className="col-md-6" data-aos="fade-up">
           <div className='vech'>
@@ -81,6 +81,7 @@ const settings = {
           <p>Our vision is rooted in the belief that every brand has a story worth telling, and it's our mission to bring those stories to life with authenticity, passion, and unparalleled creativity. We envision a future where design transcends mere aesthetics, where it becomes a catalyst for meaningful connection and positive change. Through our dedication to excellence and our relentless pursuit of innovation, we aim to empower brands to make a lasting impact in the world, one pixel at a time.</p>
           <a href="/services" className="btn btn-danger">Discover more</a>
           </div>
+        </div>
         </div>
         </div>
         </div>

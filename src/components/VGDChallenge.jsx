@@ -98,7 +98,7 @@ function VGDC() {
         </div>
 
         <div className='text-center'>
-      <div className='ab text-center'>
+      <div className='ab text-center' data-aos='fade-up'>
         <h2 className='pt-4'>Vechy Graphix Design Challenge</h2>
         <div className="under mt-3 ml-0"></div>
         <p className='mt-3'> A proud initiative of Vechy Graphix Group </p>
@@ -119,7 +119,7 @@ function VGDC() {
 
 
 
-        <div className="pt-5 text-center" data-aos="fade-up">
+        <div className="pt-5 text-center">
       <div className="bg-primary mt-5 mt-5" style={{ minHeight: '200px', padding: '20px 0' }}>
           <div className="row pt-5 d-flex justify-content-center">
             <div className='col-md-8' data-aos="fade-up">

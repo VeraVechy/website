@@ -90,7 +90,7 @@ function Services() {
   return (
     <>
         <div className="cover">
-            <div className="text-center pt-3 text-light">
+            <div className="text-center pt-3 text-light" data-aos='bounce-in'>
                 <h2 className="pt-5">Services</h2>
                 <p>Home <i className="fa fa-arrow-right ms-3 me-3"></i> Services</p>
             </div>
@@ -98,7 +98,7 @@ function Services() {
 
         {/* services */}
 
-        <div className="container mt-5 text-center">
+        <div className="container mt-5 text-center" data-aos='fade-up'>
           <h2>Complete Design Solutions For Your Brand</h2>
           <p>Transform your brand with our comprehensive range of design services tailored to meet your every need. </p>
         <section className="row">
@@ -117,7 +117,7 @@ function Services() {
       
       </div>
         
-      <div className="pt-5 text-center" data-aos="fade-up">
+      <div className="pt-5 text-center">
       <div className="bg-primary mt-5 mt-5" style={{ minHeight: '200px', padding: '20px 0' }}>
           <div className="row pt-5 d-flex justify-content-center">
             <div className='col-md-8' data-aos="fade-up">
