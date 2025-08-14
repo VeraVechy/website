@@ -65,10 +65,10 @@ const settings = {
         <p> Reliable And Affordable Epicenter For Quality And Excellent Designs</p>
       </div>
 
-      <div className="container d-flex">
+      <div className="container">
       <div className="row mt-5">
       <div className="col-md-6" data-aos="fade-up">
-          <img src={Us} className="rounded mb-5" alt="About" />
+          <img src={Us} className="rounded mb-5 img-fluid" alt="About" />
           </div>
           </div>
 

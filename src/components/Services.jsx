@@ -105,7 +105,7 @@ function Services() {
         {cardsData.map((card, index) => (
           <div key={index} className="col-md-4 mb-5" data-aos="fade-up">
             <div className="card">
-              <img src={card.image} className="card-img-top" alt="..." />
+              <img src={card.image} className="card-img-top img-fluid" alt="..." />
               <div className="card-body">
                 <h4 className="card-title ">{card.title}</h4>
                 <p className="card-text">{card.content}</p>
@@ -135,7 +135,7 @@ function Services() {
           <div key={index} className="col-md-4 mb-5">
              <div className="slider-item" style={{ marginRight: '1rem' }}>
              <div className="card">
-              <img src={card.image} className="card-img-top" alt="..." />
+              <img src={card.image} className="card-img-top img-fluid" alt="..." />
               </div>
             </div>
              </div>

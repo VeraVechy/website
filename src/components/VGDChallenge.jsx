@@ -137,7 +137,7 @@ function VGDC() {
           <div key={index} className="col-md-4 mb-5">
              <div className="slider-item" style={{ marginRight: '1rem' }}>
              <div className="card">
-              <img src={card.image} className="card-img-top" alt="..." />
+              <img src={card.image} className="card-img-top img-fluid" alt="..." />
               </div>
             </div>
              </div>
@@ -154,7 +154,7 @@ function VGDC() {
                     <h3>Let's Hear From The Winner of Season 1 </h3>
                 
                 <div className="rounded img-fluid mx-auto" >
-                    <img src={Win} alt="Winner" srcSet=''/>
+                    <img src={Win} className="img-fluid" alt="Winner" srcSet=''/>
                 </div>
                 </div>        
             </div>
