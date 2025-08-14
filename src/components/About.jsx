@@ -166,7 +166,7 @@ const settings = {
         </div>
       </div>
 
-      
+      </div>
       </>
   )
 }
