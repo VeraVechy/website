@@ -173,10 +173,7 @@ function Form() {
 
         <div className="form-footer mt-4">
           <div className="d-flex justify-content-between align-items-center">
-            <small className="text-muted">
-              <i className="fas fa-lock me-1"></i>
-              Your information is secure and will never be shared.
-            </small>
+            <div></div>
             <button 
               type="submit" 
               className="btn btn-danger btn-lg"
