@@ -1,4 +1,5 @@
 import React from 'react';
+import { useState } from 'react';
 import Logo from '../assets/flogo.png';
 
 const Footer = () => {
@@ -60,25 +61,7 @@ const Footer = () => {
           <div className="col-lg-3 col-md-6">
             <h5 className="footer-title mb-4">Stay Updated</h5>
             <p className="mb-4">Subscribe to our newsletter for design tips and exclusive offers.</p>
-            <form className="newsletter-form" action="https://formsubmit.co/vechygraphix@gmail.com" method="POST">
-              <input type="hidden" name="_subject" value="Newsletter Subscription - Vechy Graphix" />
-              <input type="hidden" name="_captcha" value="false" />
-              <input type="hidden" name="_next" value="/" />
-              <input type="hidden" name="_template" value="table" />
-              <div className="input-group mb-3">
-                <input 
-                  type="email" 
-                  name="email"
-                  className="form-control" 
-                  placeholder="Enter your email"
-                  aria-label="Email address"
-                  required
-                />
-                <button className="btn btn-danger" type="submit">
-                  <i className="fas fa-paper-plane"></i>
-                </button>
-              </div>
-            </form>
+            <NewsletterForm />
           </div>
         </div>
 
@@ -163,23 +146,6 @@ const Footer = () => {
           transform: translateY(-2px);
         }
 
-        .newsletter-form .form-control {
-          background: rgba(255, 255, 255, 0.1);
-          border: 1px solid rgba(255, 255, 255, 0.2);
-          color: #fff;
-        }
-
-        .newsletter-form .form-control::placeholder {
-          color: #adb5bd;
-        }
-
-        .newsletter-form .form-control:focus {
-          background: rgba(255, 255, 255, 0.15);
-          border-color: #E71800;
-          color: #fff;
-          box-shadow: 0 0 0 0.2rem rgba(231, 24, 0, 0.25);
-        }
-
         .footer-bottom {
           margin-top: 3rem;
           padding-top: 2rem;
@@ -209,6 +175,93 @@ const Footer = () => {
         }
       `}</style>
     </footer>
+  );
+};
+
+// Newsletter Form Component
+const NewsletterForm = () => {
+  const [email, setEmail] = useState('');
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [isSubscribed, setIsSubscribed] = useState(false);
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    setIsSubmitting(true);
+
+    try {
+      const response = await fetch('https://formsubmit.co/vechygraphix@gmail.com', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          email: email,
+          _captcha: 'false',
+          _template: 'table',
+          _subject: 'Newsletter Subscription - Vechy Graphix',
+        }),
+      });
+
+      if (response.ok) {
+        setIsSubscribed(true);
+        setEmail('');
+      } else {
+        throw new Error('Subscription failed');
+      }
+    } catch (error) {
+      console.error('Error subscribing:', error);
+      alert('There was an error subscribing. Please try again.');
+    } finally {
+      setIsSubmitting(false);
+    }
+  };
+
+  if (isSubscribed) {
+    return (
+      <div className="newsletter-success">
+        <div className="success-message">
+          <i className="fas fa-check-circle text-success me-2"></i>
+          <span>Successfully subscribed!</span>
+        </div>
+        <button 
+          className="btn btn-sm btn-outline-light mt-2"
+          onClick={() => setIsSubscribed(false)}
+        >
+          Subscribe Another Email
+        </button>
+      </div>
+    );
+  }
+
+  return (
+    <form className="newsletter-form" onSubmit={handleSubmit}>
+              <div className="input-group mb-3">
+                <input 
+                  type="email" 
+                  value={email}
+                  onChange={(e) => setEmail(e.target.value)}
+                  className="form-control" 
+                  placeholder="Enter your email"
+                  aria-label="Email address"
+                  required
+                />
+                <button 
+                  className="btn btn-danger" 
+                  type="submit"
+                  disabled={isSubmitting}
+                >
+                  {isSubmitting ? (
+                    <i className="fas fa-spinner fa-spin"></i>
+                  ) : (
+                    <i className="fas fa-paper-plane"></i>
+                  )}
+                </button>
+              </div>
+            </form>
+  );
+};
+
+export default Footer;
   );
 };
 
