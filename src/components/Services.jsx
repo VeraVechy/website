@@ -1,4 +1,6 @@
 import React from 'react';
+import { useState, useEffect } from 'react';
+import SkeletonLoader from './SkeletonLoader';
 import ab1 from '../assets/About/design.jpg';
 import ab2 from '../assets/About/web.jpg';
 import ab3 from '../assets/About/consult.jpg';
@@ -17,6 +19,21 @@ import s11 from '../assets/Serv/s11.jpg';
 import s16 from '../assets/Serv/s16.jpg';
 
 function Services() {
+  const [isLoading, setIsLoading] = useState(true);
+
+  useEffect(() => {
+    // Simulate content loading (replace with actual data fetching)
+    const timer = setTimeout(() => {
+      setIsLoading(false);
+    }, 1000);
+
+    return () => clearTimeout(timer);
+  }, []);
+
+  if (isLoading) {
+    return <SkeletonLoader type="services" />;
+  }
+
   const cardsData = [
     { 
       image: ab1, 

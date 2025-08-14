@@ -1,4 +1,6 @@
 import React from 'react';
+import { useState, useEffect } from 'react';
+import SkeletonLoader from './SkeletonLoader';
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
@@ -20,6 +22,21 @@ import pic15 from '../assets/VGDC/15.jpg';
 import Win from '../assets/VGDC/winner.jpg';
 
 function VGDChallenge() {
+  const [isLoading, setIsLoading] = useState(true);
+
+  useEffect(() => {
+    // Simulate content loading (replace with actual data fetching)
+    const timer = setTimeout(() => {
+      setIsLoading(false);
+    }, 1100);
+
+    return () => clearTimeout(timer);
+  }, []);
+
+  if (isLoading) {
+    return <SkeletonLoader type="vgdc" />;
+  }
+
   const galleryData = [
     { image: pic1, title: 'Creative Design 1' },
     { image: pic2, title: 'Creative Design 2' },

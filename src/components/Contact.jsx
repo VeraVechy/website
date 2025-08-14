@@ -1,7 +1,24 @@
 import React from 'react';
+import { useState, useEffect } from 'react';
+import SkeletonLoader from './SkeletonLoader';
 import Form from './Form';
 
 function Contact() {
+  const [isLoading, setIsLoading] = useState(true);
+
+  useEffect(() => {
+    // Simulate content loading (replace with actual data fetching)
+    const timer = setTimeout(() => {
+      setIsLoading(false);
+    }, 800);
+
+    return () => clearTimeout(timer);
+  }, []);
+
+  if (isLoading) {
+    return <SkeletonLoader type="contact" />;
+  }
+
   const contactInfo = [
     {
       icon: 'fas fa-phone',

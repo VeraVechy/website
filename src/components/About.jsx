@@ -1,4 +1,6 @@
 import React from 'react';
+import { useState, useEffect } from 'react';
+import SkeletonLoader from './SkeletonLoader';
 import Us from '../assets/About/ab.jpg';
 import ab1 from '../assets/About/design.jpg';
 import ab2 from '../assets/About/web.jpg';
@@ -12,6 +14,21 @@ import "slick-carousel/slick/slick-theme.css";
 import Form from './Form';
 
 function About() {
+  const [isLoading, setIsLoading] = useState(true);
+
+  useEffect(() => {
+    // Simulate content loading (replace with actual data fetching)
+    const timer = setTimeout(() => {
+      setIsLoading(false);
+    }, 1200);
+
+    return () => clearTimeout(timer);
+  }, []);
+
+  if (isLoading) {
+    return <SkeletonLoader type="about" />;
+  }
+
   const cardsData = [
     { 
       image: ab1, 
