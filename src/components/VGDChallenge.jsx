@@ -1,4 +1,4 @@
-import React from 'react'
+import React from 'react';
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
@@ -17,150 +17,441 @@ import pic12 from '../assets/VGDC/12.jpg';
 import pic13 from '../assets/VGDC/13.jpg';
 import pic14 from '../assets/VGDC/14.jpg';
 import pic15 from '../assets/VGDC/15.jpg';
-// import pic16 from '../assets/VGDC/16.jpg';
-// import pic17 from '../assets/VGDC/17.jpg';
-// import pic18 from '../assets/VGDC/18.jpg';
-// import pic19 from '../assets/VGDC/19.jpg';
-// import pic20 from '../assets/VGDC/20.jpg';
-// import pic21 from '../assets/VGDC/21.jpg';
-// import pic22 from '../assets/VGDC/22.jpg';
-// import pic23 from '../assets/VGDC/23.jpg';
 import Win from '../assets/VGDC/winner.jpg';
 
-
-function VGDC() {
-    // Array of card data
-  const cardsData1 = [
-    { image: pic1},
-    { image: pic2},
-    { image: pic3},
-    { image: pic4},
-    { image: pic5},
-    { image: pic6},
-    { image: pic7},
-    { image: pic8},
-    { image: pic9},
-    { image: pic10},
-    { image: pic11},
-    { image: pic12},
-    { image: pic13},
-    { image: pic14},
-    { image: pic15},
-    // { image: pic16},
-    // { image: pic17},
-    // { image: pic18},
-    // { image: pic19},
-    // { image: pic20},
-    // { image: pic21},
-    // { image: pic22},
-    // { image: pic23},
-
-    
-    // Add more card data objects as needed
-
+function VGDChallenge() {
+  const galleryData = [
+    { image: pic1, title: 'Creative Design 1' },
+    { image: pic2, title: 'Creative Design 2' },
+    { image: pic3, title: 'Creative Design 3' },
+    { image: pic4, title: 'Creative Design 4' },
+    { image: pic5, title: 'Creative Design 5' },
+    { image: pic6, title: 'Creative Design 6' },
+    { image: pic7, title: 'Creative Design 7' },
+    { image: pic8, title: 'Creative Design 8' },
+    { image: pic9, title: 'Creative Design 9' },
+    { image: pic10, title: 'Creative Design 10' },
+    { image: pic11, title: 'Creative Design 11' },
+    { image: pic12, title: 'Creative Design 12' },
+    { image: pic13, title: 'Creative Design 13' },
+    { image: pic14, title: 'Creative Design 14' },
+    { image: pic15, title: 'Creative Design 15' },
   ];
 
-    const settings = {
-      dots: false,
-      infinite: true,
-      speed: 500,
-      slidesToShow: 3,
-      slidesToScroll: 3,
-      autoplay: true,
-      autoplaySpeed: 3000,
-      arrows: false,
-      responsive: [
-        {
-          breakpoint: 1024, // breakpoint for desktop
-          settings: {
-            slidesToShow: 3,
-            slidesToScroll: 3,
-          },
+  const settings = {
+    dots: false,
+    infinite: true,
+    speed: 500,
+    slidesToShow: 4,
+    slidesToScroll: 1,
+    autoplay: true,
+    autoplaySpeed: 3000,
+    arrows: false,
+    responsive: [
+      {
+        breakpoint: 1200,
+        settings: {
+          slidesToShow: 3,
+          slidesToScroll: 1,
         },
-        {
-          breakpoint: 768, // breakpoint for tablet/mobile
-          settings: {
-            slidesToShow: 3,
-            slidesToScroll: 3,
-          },
+      },
+      {
+        breakpoint: 768,
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 1,
         },
-      ],
-    };
-  
-  
+      },
+      {
+        breakpoint: 576,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1,
+        },
+      },
+    ],
+  };
+
+  const challengeFeatures = [
+    {
+      icon: 'fas fa-trophy',
+      title: 'Competitive Spirit',
+      description: 'Showcase your creativity and compete with talented designers from around the world.'
+    },
+    {
+      icon: 'fas fa-users',
+      title: 'Community',
+      description: 'Join a vibrant community of creative professionals and enthusiasts.'
+    },
+    {
+      icon: 'fas fa-graduation-cap',
+      title: 'Learning',
+      description: 'Improve your skills through challenges and feedback from industry experts.'
+    },
+    {
+      icon: 'fas fa-gift',
+      title: 'Rewards',
+      description: 'Win exciting prizes and gain recognition for your outstanding work.'
+    }
+  ];
+
   return (
     <>
-        <div className="cover">
-            <div className="text-center pt-3 text-light">
-                <h2 className="pt-5">VGD Challenge</h2>
-                <p>Home <i className="fa fa-arrow-right ms-3 me-3"></i> VGDC</p>
-            </div>
-        </div>
-
-        <div className='text-center'>
-      <div className='ab text-center' data-aos='fade-up'>
-        <h2 className='pt-4'>Vechy Graphix Design Challenge</h2>
-        <div className="under mt-3 ml-0"></div>
-        <p className='mt-3'> A proud initiative of Vechy Graphix Group </p>
-      </div>
-
-        
-        <div className="row">
-        <div className="col-md-6" data-aos="fade-up">
-          <div className='vech'>
-          <p className='text-danger'>ALL ABOUT THE CHALLENGE </p>
-          <h2>Graphic Designs, Branding, Consultations, And More</h2>
-          <p>Our vision is rooted in the belief that every brand has a story worth telling, and it's our mission to bring those stories to life with authenticity, passion, and unparalleled creativity. We envision a future where design transcends mere aesthetics, where it becomes a catalyst for meaningful connection and positive change. Through our dedication to excellence and our relentless pursuit of innovation, we aim to empower brands to make a lasting impact in the world, one pixel at a time.</p>
-          <a href="/contact" className="btn btn-danger">Participate </a>
+      {/* Hero Section */}
+      <section className="cover">
+        <div className="container">
+          <div className="text-center text-light" data-aos="fade-up">
+            <h1 className="display-4 fw-bold mb-3">VGD Challenge</h1>
+            <nav aria-label="breadcrumb">
+              <ol className="breadcrumb justify-content-center">
+                <li className="breadcrumb-item">
+                  <a href="/" className="text-light text-decoration-none">Home</a>
+                </li>
+                <li className="breadcrumb-item active text-light" aria-current="page">VGD Challenge</li>
+              </ol>
+            </nav>
+            <p className="lead mt-3">Where creativity meets competition and dreams take flight</p>
           </div>
         </div>
-        </div>
-        </div>
+      </section>
 
+      {/* Challenge Introduction */}
+      <section className="section-padding">
+        <div className="container">
+          <div className="text-center mb-5" data-aos="fade-up">
+            <p className="text-danger text-uppercase fw-bold mb-2">Creative Competition</p>
+            <h2>Vechy Graphix Design Challenge</h2>
+            <div className="under"></div>
+            <p className="lead">A proud initiative of Vechy Graphix Group</p>
+          </div>
 
-
-        <div className="pt-5 text-center">
-      <div className="bg-primary mt-5 mt-5" style={{ minHeight: '200px', padding: '20px 0' }}>
-          <div className="row pt-5 d-flex justify-content-center">
-            <div className='col-md-8' data-aos="fade-up">
-            <h2 className='text-light text-center'>VGDC GALLERY</h2>
-            <p className='text-light text-center'>Take a look at some of the amazing designs from the participants.</p>
-            </div>
-            </div>
-            </div>
-      </div>
-
-      <div className="mt-5">
-      <section className="row">
-      <Slider {...settings}>
-        {cardsData1.map((card, index) => (
-          <div key={index} className="col-md-4 mb-5">
-             <div className="slider-item">
-             <div className="card">
-              <img src={card.image} className="card-img-top img-fluid" alt="..." />
+          <div className="row align-items-center g-5">
+            <div className="col-lg-6" data-aos="fade-right">
+              <div className="challenge-content">
+                <div className="challenge-badge mb-4">
+                  <span className="badge bg-danger fs-6 px-3 py-2">
+                    <i className="fas fa-star me-2"></i>
+                    All About The Challenge
+                  </span>
+                </div>
+                <h2 className="mb-4">Unleash Your Creative Potential</h2>
+                <p className="mb-4">
+                  The Vechy Graphix Design Challenge is more than just a competition – it's a platform 
+                  where creativity flourishes and talent is recognized. Our vision is rooted in the belief 
+                  that every designer has a unique story to tell through their work.
+                </p>
+                <p className="mb-4">
+                  We envision a future where design transcends mere aesthetics, becoming a catalyst for 
+                  meaningful connection and positive change. Through our dedication to excellence and 
+                  relentless pursuit of innovation, we empower designers to make a lasting impact in 
+                  the world, one pixel at a time.
+                </p>
+                <div className="challenge-stats row g-3 mb-4">
+                  <div className="col-4">
+                    <div className="stat-item text-center">
+                      <h3 className="text-danger mb-1">500+</h3>
+                      <small className="text-muted">Participants</small>
+                    </div>
+                  </div>
+                  <div className="col-4">
+                    <div className="stat-item text-center">
+                      <h3 className="text-danger mb-1">50+</h3>
+                      <small className="text-muted">Winners</small>
+                    </div>
+                  </div>
+                  <div className="col-4">
+                    <div className="stat-item text-center">
+                      <h3 className="text-danger mb-1">2</h3>
+                      <small className="text-muted">Seasons</small>
+                    </div>
+                  </div>
+                </div>
+                <a href="/contact" className="btn btn-danger btn-lg">
+                  Join The Challenge <i className="fas fa-arrow-right ms-2"></i>
+                </a>
               </div>
             </div>
-             </div>
-          // </div>
-        ))}
-        </Slider>
+            <div className="col-lg-6" data-aos="fade-left">
+              <div className="challenge-features">
+                {challengeFeatures.map((feature, index) => (
+                  <div key={index} className="feature-card d-flex align-items-start mb-4">
+                    <div className="feature-icon me-4">
+                      <i className={feature.icon}></i>
+                    </div>
+                    <div className="feature-content">
+                      <h4 className="mb-2">{feature.title}</h4>
+                      <p className="mb-0 text-muted">{feature.description}</p>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </div>
+        </div>
       </section>
-    </div>
 
-        <div className="container mt-5 mb-3">
-            <div className="row">
-              
-                <div className="col-md-6" data-aos="fade-up">
-                    <h3>Let's Hear From The Winner of Season 1 </h3>
-                
-                <div className="rounded img-fluid mx-auto" >
-                    <img src={Win} className="img-fluid" alt="Winner" srcSet=''/>
+      {/* Gallery Section */}
+      <section className="bg-primary section-padding">
+        <div className="container">
+          <div className="text-center mb-5" data-aos="fade-up">
+            <h2 className="text-light mb-3">VGDC Gallery</h2>
+            <p className="text-light lead">
+              Discover the incredible creativity and talent of our challenge participants
+            </p>
+          </div>
+
+          <div className="gallery-slider" data-aos="fade-up">
+            <Slider {...settings}>
+              {galleryData.map((item, index) => (
+                <div key={index} className="px-3">
+                  <div className="gallery-item">
+                    <div className="gallery-img-wrapper">
+                      <img src={item.image} className="img-fluid" alt={item.title} />
+                      <div className="gallery-overlay">
+                        <div className="gallery-content">
+                          <h5 className="text-white mb-3">{item.title}</h5>
+                          <div className="gallery-actions">
+                            <button className="btn btn-light btn-sm rounded-circle me-2">
+                              <i className="fas fa-eye"></i>
+                            </button>
+                            <button className="btn btn-danger btn-sm rounded-circle">
+                              <i className="fas fa-heart"></i>
+                            </button>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
                 </div>
-                </div>        
+              ))}
+            </Slider>
+          </div>
+        </div>
+      </section>
+
+      {/* Winner Spotlight */}
+      <section className="section-padding bg-light">
+        <div className="container">
+          <div className="row align-items-center g-5">
+            <div className="col-lg-6" data-aos="fade-right">
+              <div className="winner-content">
+                <div className="winner-badge mb-4">
+                  <span className="badge bg-warning text-dark fs-6 px-3 py-2">
+                    <i className="fas fa-crown me-2"></i>
+                    Season 1 Winner
+                  </span>
+                </div>
+                <h2 className="mb-4">Meet Our Champion</h2>
+                <p className="mb-4">
+                  "Participating in the VGD Challenge was an incredible experience that pushed my 
+                  creative boundaries and connected me with an amazing community of designers. 
+                  The feedback and recognition I received have been invaluable for my growth as a designer."
+                </p>
+                <div className="winner-details">
+                  <div className="d-flex align-items-center mb-3">
+                    <i className="fas fa-user text-danger me-3"></i>
+                    <span><strong>Winner:</strong> Creative Designer</span>
+                  </div>
+                  <div className="d-flex align-items-center mb-3">
+                    <i className="fas fa-calendar text-danger me-3"></i>
+                    <span><strong>Season:</strong> 1 (2023)</span>
+                  </div>
+                  <div className="d-flex align-items-center">
+                    <i className="fas fa-trophy text-danger me-3"></i>
+                    <span><strong>Category:</strong> Best Overall Design</span>
+                  </div>
+                </div>
+              </div>
             </div>
+            <div className="col-lg-6" data-aos="fade-left">
+              <div className="winner-image-wrapper">
+                <img src={Win} className="img-fluid rounded-lg shadow-lg" alt="Season 1 Winner" />
+                <div className="winner-overlay">
+                  <div className="winner-badge-overlay">
+                    <i className="fas fa-crown"></i>
+                    <span>Winner</span>
+                  </div>
+                </div>
+              </div>
             </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Call to Action */}
+      <section className="section-padding">
+        <div className="container">
+          <div className="row justify-content-center">
+            <div className="col-lg-8 text-center" data-aos="fade-up">
+              <h2 className="mb-4">Ready to Showcase Your Talent?</h2>
+              <p className="lead mb-4">
+                Join thousands of creative professionals in our next design challenge. 
+                Whether you're a seasoned designer or just starting out, this is your 
+                chance to shine and be recognized for your creativity.
+              </p>
+              <div className="cta-buttons">
+                <a href="/contact" className="btn btn-danger btn-lg me-3">
+                  Participate Now <i className="fas fa-rocket ms-2"></i>
+                </a>
+                <a href="/services" className="btn btn-outline-danger btn-lg">
+                  Learn More <i className="fas fa-info-circle ms-2"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <style jsx>{`
+        .breadcrumb {
+          background: none;
+          padding: 0;
+          margin: 0;
+        }
+
+        .breadcrumb-item + .breadcrumb-item::before {
+          content: "→";
+          color: rgba(255, 255, 255, 0.7);
+        }
+
+        .challenge-badge .badge {
+          border-radius: 25px;
+        }
+
+        .stat-item {
+          padding: 1rem;
+          background: rgba(231, 24, 0, 0.05);
+          border-radius: 10px;
+        }
+
+        .stat-item h3 {
+          font-weight: 700;
+          font-size: 2rem;
+        }
+
+        .feature-card {
+          background: white;
+          padding: 1.5rem;
+          border-radius: 10px;
+          box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+          transition: transform 0.3s ease;
+        }
+
+        .feature-card:hover {
+          transform: translateY(-5px);
+        }
+
+        .feature-icon {
+          width: 60px;
+          height: 60px;
+          background: linear-gradient(135deg, #E71800, #ff4500);
+          border-radius: 50%;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          color: white;
+          font-size: 1.2rem;
+          flex-shrink: 0;
+        }
+
+        .gallery-item {
+          position: relative;
+          border-radius: 15px;
+          overflow: hidden;
+        }
+
+        .gallery-img-wrapper {
+          position: relative;
+          height: 300px;
+          overflow: hidden;
+          border-radius: 15px;
+        }
+
+        .gallery-img-wrapper img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+          transition: transform 0.3s ease;
+        }
+
+        .gallery-overlay {
+          position: absolute;
+          top: 0;
+          left: 0;
+          right: 0;
+          bottom: 0;
+          background: linear-gradient(135deg, rgba(0, 0, 0, 0.7), rgba(231, 24, 0, 0.7));
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          opacity: 0;
+          transition: opacity 0.3s ease;
+        }
+
+        .gallery-item:hover .gallery-overlay {
+          opacity: 1;
+        }
+
+        .gallery-item:hover img {
+          transform: scale(1.1);
+        }
+
+        .gallery-content {
+          text-align: center;
+        }
+
+        .winner-image-wrapper {
+          position: relative;
+        }
+
+        .winner-overlay {
+          position: absolute;
+          top: 20px;
+          right: 20px;
+        }
+
+        .winner-badge-overlay {
+          background: linear-gradient(135deg, #ffd700, #ffed4e);
+          color: #333;
+          padding: 10px 15px;
+          border-radius: 25px;
+          font-weight: bold;
+          box-shadow: 0 5px 15px rgba(255, 215, 0, 0.4);
+        }
+
+        .winner-badge-overlay i {
+          margin-right: 5px;
+        }
+
+        .winner-details {
+          background: #f8f9fa;
+          padding: 1.5rem;
+          border-radius: 10px;
+          border-left: 4px solid #E71800;
+        }
+
+        .cta-buttons .btn {
+          margin: 0.5rem;
+        }
+
+        @media (max-width: 768px) {
+          .challenge-stats {
+            margin-top: 2rem;
+          }
+
+          .feature-card {
+            margin-bottom: 1rem;
+          }
+
+          .cta-buttons .btn {
+            display: block;
+            width: 100%;
+            margin: 0.5rem 0;
+          }
+        }
+      `}</style>
     </>
-  )
+  );
 }
 
-export default VGDC
+export default VGDChallenge;
