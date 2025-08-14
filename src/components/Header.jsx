@@ -1,8 +1,10 @@
 import React, { useState, useEffect } from 'react';
+import { useLocation } from 'react-router-dom';
 import Logo from '../assets/flogo.png';
 
 function Header() {
   const [isScrolled, setIsScrolled] = useState(false);
+  const location = useLocation();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -13,6 +15,9 @@ function Header() {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
+  const isActive = (path) => {
+    return location.pathname === path;
+  };
   return (
     <>
       <nav className={`navbar navbar-expand-lg fixed-top ${isScrolled ? 'navbar-scrolled' : ''}`}>
@@ -34,16 +39,16 @@ function Header() {
           <div className="collapse navbar-collapse" id="navbarNav">
             <ul className="navbar-nav mx-auto">
               <li className="nav-item">
-                <a className="nav-link" href="/">About</a>
+                <a className={`nav-link ${isActive('/') ? 'active' : ''}`} href="/">About</a>
               </li>
               <li className="nav-item">
-                <a className="nav-link" href="/services">Services</a>
+                <a className={`nav-link ${isActive('/services') ? 'active' : ''}`} href="/services">Services</a>
               </li>
               <li className="nav-item">
-                <a className="nav-link" href="/vgdc">VGD Challenge</a>
+                <a className={`nav-link ${isActive('/vgdc') ? 'active' : ''}`} href="/vgdc">VGD Challenge</a>
               </li>
               <li className="nav-item">
-                <a className="nav-link" href="/contact">Contact Us</a>
+                <a className={`nav-link ${isActive('/contact') ? 'active' : ''}`} href="/contact">Contact Us</a>
               </li>
             </ul>
             <a href="/contact" className="btn btn-danger">Get A Quote</a>

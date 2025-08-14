@@ -243,6 +243,60 @@ function About() {
         </div>
       </section>
 
+      {/* Careers Section */}
+      <section className="section-padding bg-light">
+        <div className="container">
+          <div className="text-center mb-5" data-aos="fade-up">
+            <p className="text-danger text-uppercase fw-bold mb-2">Join Our Team</p>
+            <h2>Build Your Career With Us</h2>
+            <div className="under"></div>
+            <p className="lead">
+              We're always looking for talented individuals to join our creative team
+            </p>
+          </div>
+
+          <div className="row g-4">
+            <div className="col-lg-4" data-aos="fade-up" data-aos-delay="100">
+              <div className="career-highlight text-center">
+                <div className="career-icon">
+                  <i className="fas fa-home"></i>
+                </div>
+                <h4 className="mb-3">Remote Work</h4>
+                <p className="text-muted">Work from anywhere in the world with flexible hours and work-life balance.</p>
+              </div>
+            </div>
+            <div className="col-lg-4" data-aos="fade-up" data-aos-delay="200">
+              <div className="career-highlight text-center">
+                <div className="career-icon">
+                  <i className="fas fa-rocket"></i>
+                </div>
+                <h4 className="mb-3">Growth Opportunities</h4>
+                <p className="text-muted">Advance your career with exciting projects and continuous learning opportunities.</p>
+              </div>
+            </div>
+            <div className="col-lg-4" data-aos="fade-up" data-aos-delay="300">
+              <div className="career-highlight text-center">
+                <div className="career-icon">
+                  <i className="fas fa-users"></i>
+                </div>
+                <h4 className="mb-3">Creative Team</h4>
+                <p className="text-muted">Join a collaborative team of talented professionals who value creativity and innovation.</p>
+              </div>
+            </div>
+          </div>
+
+          <div className="text-center mt-5" data-aos="fade-up">
+            <h3 className="mb-4">Ready to Join Our Team?</h3>
+            <p className="lead mb-4">
+              We have exciting opportunities for graphic designers, web developers, and marketing specialists.
+            </p>
+            <a href="/careers" className="btn btn-danger btn-lg">
+              View Open Positions <i className="fas fa-arrow-right ms-2"></i>
+            </a>
+          </div>
+        </div>
+      </section>
+
       <style jsx>{`
         .image-wrapper {
           position: relative;
@@ -288,6 +342,29 @@ function About() {
 
         .contact-form-wrapper {
           box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+        }
+
+        .career-highlight {
+          padding: 2rem 1rem;
+          height: 100%;
+          transition: transform 0.3s ease;
+        }
+
+        .career-highlight:hover {
+          transform: translateY(-5px);
+        }
+
+        .career-icon {
+          width: 80px;
+          height: 80px;
+          background: linear-gradient(135deg, rgba(231, 24, 0, 0.1), rgba(255, 69, 0, 0.1));
+          border-radius: 50%;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          margin: 0 auto 1.5rem;
+          color: #E71800;
+          font-size: 1.5rem;
         }
 
         @media (max-width: 768px) {

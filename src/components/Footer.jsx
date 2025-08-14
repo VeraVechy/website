@@ -41,6 +41,7 @@ const Footer = () => {
               <li><a href="/">About</a></li>
               <li><a href="/services">Services</a></li>
               <li><a href="/vgdc">VGD Challenge</a></li>
+              <li><a href="/careers">Careers</a></li>
               <li><a href="/contact">Contact Us</a></li>
             </ul>
           </div>
@@ -183,10 +184,13 @@ const NewsletterForm = () => {
   const [email, setEmail] = useState('');
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isSubscribed, setIsSubscribed] = useState(false);
+  const [showError, setShowError] = useState(false);
+  const [errorMessage, setErrorMessage] = useState('');
 
   const handleSubmit = async (e) => {
     e.preventDefault();
     setIsSubmitting(true);
+    setShowError(false);
 
     try {
       const response = await fetch('https://formsubmit.co/vechygraphix@gmail.com', {
@@ -205,30 +209,45 @@ const NewsletterForm = () => {
       if (response.ok) {
         setIsSubscribed(true);
         setEmail('');
+        // Auto-return to normal after 15 seconds
+        setTimeout(() => {
+          setIsSubscribed(false);
+        }, 15000);
       } else {
         throw new Error('Subscription failed');
       }
     } catch (error) {
       console.error('Error subscribing:', error);
-      alert('There was an error subscribing. Please try again.');
+      setErrorMessage('There was an error subscribing. Please try again.');
+      setShowError(true);
+      // Auto-hide error after 15 seconds
+      setTimeout(() => {
+        setShowError(false);
+        setErrorMessage('');
+      }, 15000);
     } finally {
       setIsSubmitting(false);
     }
   };
 
+  if (showError) {
+    return (
+      <div className="newsletter-error">
+        <div className="error-message p-3 bg-danger text-white rounded mb-3">
+          <i className="fas fa-exclamation-triangle me-2"></i>
+          <span>{errorMessage}</span>
+        </div>
+      </div>
+    );
+  }
+
   if (isSubscribed) {
     return (
       <div className="newsletter-success">
-        <div className="success-message">
-          <i className="fas fa-check-circle text-success me-2"></i>
-          <span>Successfully subscribed!</span>
+        <div className="success-message p-3 bg-success text-white rounded mb-3">
+          <i className="fas fa-check-circle me-2"></i>
+          <span className="text-white">Thank you for subscribing!</span>
         </div>
-        <button 
-          className="btn btn-sm btn-outline-light mt-2"
-          onClick={() => setIsSubscribed(false)}
-        >
-          Subscribe Another Email
-        </button>
       </div>
     );
   }
