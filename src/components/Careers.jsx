@@ -31,7 +31,7 @@ function Careers() {
       description: 'We are looking for a creative and experienced graphic designer to join our team. You will be responsible for creating visual concepts and designs for various projects.',
       applicationUrl: 'https://forms.gle/your-senior-designer-form', // Replace with your actual form URL
       postedDate: '2025-01-10',
-      isActive: true
+      isActive: false
     },
     {
       id: 2,
@@ -44,7 +44,7 @@ function Careers() {
       description: 'Join our development team to create stunning and responsive websites. You will work closely with designers to bring creative visions to life.',
       applicationUrl: 'https://forms.gle/your-frontend-dev-form', // Replace with your actual form URL
       postedDate: '2025-01-08',
-      isActive: true
+      isActive: false
     },
     {
       id: 3,
@@ -57,7 +57,7 @@ function Careers() {
       description: 'Help us grow our digital presence and reach more clients through strategic marketing campaigns and social media management.',
       applicationUrl: 'https://forms.gle/your-marketing-specialist-form', // Replace with your actual form URL
       postedDate: '2025-01-05',
-      isActive: true
+      isActive: false
     },
     {
       id: 4,
@@ -70,7 +70,7 @@ function Careers() {
       description: 'Create intuitive and engaging user experiences for web and mobile applications. Work with cross-functional teams to deliver exceptional design solutions.',
       applicationUrl: 'https://forms.gle/your-uiux-designer-form', // Replace with your actual form URL
       postedDate: '2025-01-12',
-      isActive: true
+      isActive: false
     }
   ];
 
@@ -197,7 +197,7 @@ function Careers() {
                 <i className="fas fa-briefcase mb-4" style={{ fontSize: '4rem', color: '#E71800' }}></i>
                 <h3 className="mb-3">No Open Positions</h3>
                 <p className="lead mb-4">
-                  We don't have any open positions at the moment, but we're always looking for talented individuals.
+                  We don't have any open positions at the moment, but we're always looking for talented individuals. Please check back later for new opportunities.
                 </p>
                 <a href="/contact" className="btn btn-danger btn-lg">
                   Send Us Your Resume <i className="fas fa-paper-plane ms-2"></i>
