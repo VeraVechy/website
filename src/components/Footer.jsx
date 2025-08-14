@@ -60,13 +60,19 @@ const Footer = () => {
           <div className="col-lg-3 col-md-6">
             <h5 className="footer-title mb-4">Stay Updated</h5>
             <p className="mb-4">Subscribe to our newsletter for design tips and exclusive offers.</p>
-            <form className="newsletter-form">
+            <form className="newsletter-form" action="https://formsubmit.co/vechygraphix@gmail.com" method="POST">
+              <input type="hidden" name="_subject" value="Newsletter Subscription - Vechy Graphix" />
+              <input type="hidden" name="_captcha" value="false" />
+              <input type="hidden" name="_next" value="/" />
+              <input type="hidden" name="_template" value="table" />
               <div className="input-group mb-3">
                 <input 
                   type="email" 
+                  name="email"
                   className="form-control" 
                   placeholder="Enter your email"
                   aria-label="Email address"
+                  required
                 />
                 <button className="btn btn-danger" type="submit">
                   <i className="fas fa-paper-plane"></i>

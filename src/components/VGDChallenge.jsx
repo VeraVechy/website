@@ -55,6 +55,80 @@ function VGDChallenge() {
     { image: pic15, title: 'Creative Design 15' },
   ];
 
+  const updatedChallengeFeatures = [
+    {
+      icon: 'fas fa-trophy',
+      title: 'Win Big Prizes',
+      description: 'Over $5,000 in prizes including cash rewards, design software licenses, and professional mentorship opportunities.'
+    },
+    {
+      icon: 'fas fa-users',
+      title: 'Global Community',
+      description: 'Connect with designers from over 50 countries and build lasting professional relationships.'
+    },
+    {
+      icon: 'fas fa-star',
+      title: 'Industry Recognition',
+      description: 'Get your work featured on our platform and gain exposure to potential clients and employers.'
+    },
+    {
+      icon: 'fas fa-graduation-cap',
+      title: 'Expert Feedback',
+      description: 'Receive detailed feedback from industry professionals and improve your design skills.'
+    }
+  ];
+
+  const challengeCategories = [
+    {
+      icon: 'fas fa-palette',
+      title: 'Brand Identity',
+      description: 'Create a complete brand identity for a fictional startup, including logo, color palette, and brand guidelines.',
+      prize: '1st Prize: $2,000',
+      requirements: ['Logo design', 'Brand guidelines', 'Business card design', 'Letterhead design']
+    },
+    {
+      icon: 'fas fa-mobile-alt',
+      title: 'UI/UX Design',
+      description: 'Design a mobile app interface that solves a real-world problem with innovative user experience.',
+      prize: '1st Prize: $2,000',
+      requirements: ['Wireframes', 'High-fidelity mockups', 'Prototype', 'User flow diagram']
+    },
+    {
+      icon: 'fas fa-image',
+      title: 'Digital Art',
+      description: 'Create an original digital artwork that represents the theme "Future of Design".',
+      prize: '1st Prize: $1,000',
+      requirements: ['Original artwork', 'High resolution (300 DPI)', 'Artist statement', 'Process documentation']
+    }
+  ];
+
+  const challengeTimeline = [
+    {
+      icon: 'fas fa-play',
+      date: 'January 15, 2025',
+      title: 'Registration Opens',
+      description: 'Sign up and choose your category. Early bird participants get exclusive resources.'
+    },
+    {
+      icon: 'fas fa-upload',
+      date: 'March 31, 2025',
+      title: 'Submission Deadline',
+      description: 'All entries must be submitted by 11:59 PM EST. Late submissions will not be accepted.'
+    },
+    {
+      icon: 'fas fa-eye',
+      date: 'April 1-15, 2025',
+      title: 'Judging Period',
+      description: 'Our panel of expert judges will evaluate all submissions based on creativity, execution, and theme adherence.'
+    },
+    {
+      icon: 'fas fa-trophy',
+      date: 'April 20, 2025',
+      title: 'Winners Announced',
+      description: 'Winners will be announced live on our social media channels and contacted directly.'
+    }
+  ];
+
   const settings = {
     dots: false,
     infinite: true,
@@ -89,28 +163,6 @@ function VGDChallenge() {
     ],
   };
 
-  const challengeFeatures = [
-    {
-      icon: 'fas fa-trophy',
-      title: 'Competitive Spirit',
-      description: 'Showcase your creativity and compete with talented designers from around the world.'
-    },
-    {
-      icon: 'fas fa-users',
-      title: 'Community',
-      description: 'Join a vibrant community of creative professionals and enthusiasts.'
-    },
-    {
-      icon: 'fas fa-graduation-cap',
-      title: 'Learning',
-      description: 'Improve your skills through challenges and feedback from industry experts.'
-    },
-    {
-      icon: 'fas fa-gift',
-      title: 'Rewards',
-      description: 'Win exciting prizes and gain recognition for your outstanding work.'
-    }
-  ];
 
   return (
     <>
@@ -136,61 +188,60 @@ function VGDChallenge() {
       <section className="section-padding">
         <div className="container">
           <div className="text-center mb-5" data-aos="fade-up">
-            <p className="text-danger text-uppercase fw-bold mb-2">Creative Competition</p>
-            <h2>Vechy Graphix Design Challenge</h2>
+            <p className="text-danger text-uppercase fw-bold mb-2">Season 2 Now Open!</p>
+            <h2>Vechy Graphix Design Challenge 2025</h2>
             <div className="under"></div>
-            <p className="lead">A proud initiative of Vechy Graphix Group</p>
+            <p className="lead">Join the most exciting design competition of the year</p>
           </div>
 
           <div className="row align-items-center g-5">
             <div className="col-lg-6" data-aos="fade-right">
               <div className="challenge-content">
                 <div className="challenge-badge mb-4">
-                  <span className="badge bg-danger fs-6 px-3 py-2">
-                    <i className="fas fa-star me-2"></i>
-                    All About The Challenge
+                  <span className="badge bg-success fs-6 px-3 py-2">
+                    <i className="fas fa-calendar me-2"></i>
+                    Registration Open Until March 31, 2025
                   </span>
                 </div>
-                <h2 className="mb-4">Unleash Your Creative Potential</h2>
+                <h2 className="mb-4">Season 2: "Future of Design"</h2>
                 <p className="mb-4">
-                  The Vechy Graphix Design Challenge is more than just a competition – it's a platform 
-                  where creativity flourishes and talent is recognized. Our vision is rooted in the belief 
-                  that every designer has a unique story to tell through their work.
+                  Welcome to Season 2 of the Vechy Graphix Design Challenge! This year's theme is 
+                  "Future of Design" - we're looking for innovative designs that push boundaries and 
+                  imagine what design will look like in the next decade.
                 </p>
                 <p className="mb-4">
-                  We envision a future where design transcends mere aesthetics, becoming a catalyst for 
-                  meaningful connection and positive change. Through our dedication to excellence and 
-                  relentless pursuit of innovation, we empower designers to make a lasting impact in 
-                  the world, one pixel at a time.
+                  Whether you're a seasoned professional or just starting your design journey, this 
+                  challenge offers an incredible opportunity to showcase your creativity, learn from 
+                  industry experts, and win amazing prizes worth over $5,000!
                 </p>
                 <div className="challenge-stats row g-3 mb-4">
                   <div className="col-4">
                     <div className="stat-item text-center">
-                      <h3 className="text-danger mb-1">500+</h3>
-                      <small className="text-muted">Participants</small>
+                      <h3 className="text-danger mb-1">$5,000+</h3>
+                      <small className="text-muted">Prize Pool</small>
                     </div>
                   </div>
                   <div className="col-4">
                     <div className="stat-item text-center">
-                      <h3 className="text-danger mb-1">50+</h3>
-                      <small className="text-muted">Winners</small>
+                      <h3 className="text-danger mb-1">3</h3>
+                      <small className="text-muted">Categories</small>
                     </div>
                   </div>
                   <div className="col-4">
                     <div className="stat-item text-center">
-                      <h3 className="text-danger mb-1">2</h3>
-                      <small className="text-muted">Seasons</small>
+                      <h3 className="text-danger mb-1">60</h3>
+                      <small className="text-muted">Days Left</small>
                     </div>
                   </div>
                 </div>
                 <a href="/contact" className="btn btn-danger btn-lg">
-                  Join The Challenge <i className="fas fa-arrow-right ms-2"></i>
+                  Register Now <i className="fas fa-rocket ms-2"></i>
                 </a>
               </div>
             </div>
             <div className="col-lg-6" data-aos="fade-left">
               <div className="challenge-features">
-                {challengeFeatures.map((feature, index) => (
+                {updatedChallengeFeatures.map((feature, index) => (
                   <div key={index} className="feature-card d-flex align-items-start mb-4">
                     <div className="feature-icon me-4">
                       <i className={feature.icon}></i>
@@ -207,13 +258,87 @@ function VGDChallenge() {
         </div>
       </section>
 
+      {/* Challenge Categories */}
+      <section className="section-padding bg-light">
+        <div className="container">
+          <div className="text-center mb-5" data-aos="fade-up">
+            <h2>Challenge Categories</h2>
+            <div className="under"></div>
+            <p className="lead">Choose your category and showcase your skills</p>
+          </div>
+
+          <div className="row g-4">
+            {challengeCategories.map((category, index) => (
+              <div key={index} className="col-lg-4" data-aos="fade-up" data-aos-delay={index * 100}>
+                <div className="category-card card h-100">
+                  <div className="card-body text-center">
+                    <div className="category-icon mb-4">
+                      <i className={category.icon}></i>
+                    </div>
+                    <h4 className="card-title mb-3">{category.title}</h4>
+                    <p className="card-text mb-4">{category.description}</p>
+                    <div className="prize-info">
+                      <span className="badge bg-warning text-dark fs-6 mb-2">
+                        <i className="fas fa-trophy me-1"></i>
+                        {category.prize}
+                      </span>
+                      <div className="requirements">
+                        <small className="text-muted">Requirements:</small>
+                        <ul className="list-unstyled mt-2">
+                          {category.requirements.map((req, idx) => (
+                            <li key={idx} className="small text-muted">
+                              <i className="fas fa-check text-success me-1"></i>
+                              {req}
+                            </li>
+                          ))}
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Timeline */}
+      <section className="section-padding">
+        <div className="container">
+          <div className="text-center mb-5" data-aos="fade-up">
+            <h2>Challenge Timeline</h2>
+            <div className="under"></div>
+            <p className="lead">Important dates you need to know</p>
+          </div>
+
+          <div className="row justify-content-center">
+            <div className="col-lg-8">
+              <div className="timeline">
+                {challengeTimeline.map((event, index) => (
+                  <div key={index} className="timeline-item" data-aos="fade-up" data-aos-delay={index * 100}>
+                    <div className="timeline-marker">
+                      <i className={event.icon}></i>
+                    </div>
+                    <div className="timeline-content">
+                      <div className="timeline-date">{event.date}</div>
+                      <h5>{event.title}</h5>
+                      <p className="mb-0">{event.description}</p>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Gallery Section */}
       <section className="bg-primary section-padding">
         <div className="container">
           <div className="text-center mb-5" data-aos="fade-up">
-            <h2 className="text-light mb-3">VGDC Gallery</h2>
+            <h2 className="text-light mb-3">Season 1 Highlights</h2>
             <p className="text-light lead">
-              Discover the incredible creativity and talent of our challenge participants
+              Amazing submissions from our previous season
             </p>
           </div>
 
@@ -453,6 +578,119 @@ function VGDChallenge() {
 
         @media (max-width: 768px) {
           .challenge-stats {
+
+      .category-card {
+        transition: all 0.3s ease;
+        border: none;
+        box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+      }
+
+      .category-card:hover {
+        transform: translateY(-10px);
+        box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
+      }
+
+      .category-icon {
+        width: 80px;
+        height: 80px;
+        background: linear-gradient(135deg, #E71800, #ff4500);
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 0 auto;
+        color: white;
+        font-size: 1.5rem;
+      }
+
+      .requirements ul {
+        max-height: 120px;
+        overflow-y: auto;
+      }
+
+      .timeline {
+        position: relative;
+        padding-left: 2rem;
+      }
+
+      .timeline::before {
+        content: '';
+        position: absolute;
+        left: 30px;
+        top: 0;
+        bottom: 0;
+        width: 2px;
+        background: linear-gradient(135deg, #E71800, #ff4500);
+      }
+
+      .timeline-item {
+        position: relative;
+        margin-bottom: 3rem;
+        padding-left: 4rem;
+      }
+
+      .timeline-marker {
+        position: absolute;
+        left: -2rem;
+        top: 0;
+        width: 60px;
+        height: 60px;
+        background: linear-gradient(135deg, #E71800, #ff4500);
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: white;
+        font-size: 1.2rem;
+        box-shadow: 0 5px 15px rgba(231, 24, 0, 0.3);
+      }
+
+      .timeline-content {
+        background: white;
+        padding: 1.5rem;
+        border-radius: 10px;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        border-left: 4px solid #E71800;
+      }
+
+      .timeline-date {
+        color: #E71800;
+        font-weight: 600;
+        font-size: 0.9rem;
+        text-transform: uppercase;
+        margin-bottom: 0.5rem;
+      }
+
+      .timeline-content h5 {
+        color: #333;
+        margin-bottom: 0.5rem;
+      }
+
+      .timeline-content p {
+        color: #666;
+        margin: 0;
+      }
+
+      @media (max-width: 768px) {
+        .timeline {
+          padding-left: 1rem;
+        }
+
+        .timeline::before {
+          left: 15px;
+        }
+
+        .timeline-item {
+          padding-left: 3rem;
+        }
+
+        .timeline-marker {
+          left: -1.5rem;
+          width: 45px;
+          height: 45px;
+          font-size: 1rem;
+        }
+      }
             margin-top: 2rem;
           }
 
