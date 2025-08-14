@@ -167,6 +167,21 @@ const Footer = () => {
           color: #E71800;
         }
 
+        .newsletter-success {
+          text-align: center;
+        }
+
+        .success-message {
+          color: #28a745;
+          font-weight: 500;
+          margin-bottom: 0.5rem;
+        }
+
+        .newsletter-form .btn:disabled {
+          opacity: 0.7;
+          cursor: not-allowed;
+        }
+
         @media (max-width: 768px) {
           .footer-bottom .col-md-6:last-child {
             text-align: center !important;
@@ -258,10 +273,6 @@ const NewsletterForm = () => {
                 </button>
               </div>
             </form>
-  );
-};
-
-export default Footer;
   );
 };
 
