@@ -66,20 +66,17 @@ const settings = {
       </div>
 
       <div className="container">
-      <div className="row mt-5">
-      <div className="col-md-6" data-aos="fade-up">
+      <div className="row mt-5 d-flex align-items-center">
+        <div className="col-md-6" data-aos="fade-up">
           <img src={Us} className="rounded mb-5 img-fluid" alt="About" />
-          </div>
-          </div>
-
-        
+        </div>
         <div className="col-md-6" data-aos="fade-up">
           <p className='text-danger'>CREATIVE DESIGN COMPANY</p>
           <h2>Graphic Designs, Branding, Consultations, And More</h2>
           <p>Our vision is rooted in the belief that every brand has a story worth telling, and it's our mission to bring those stories to life with authenticity, passion, and unparalleled creativity. We envision a future where design transcends mere aesthetics, where it becomes a catalyst for meaningful connection and positive change. Through our dedication to excellence and our relentless pursuit of innovation, we aim to empower brands to make a lasting impact in the world, one pixel at a time.</p>
           <a href="/services" className="btn btn-danger">Discover more</a>
-          </div>
         </div>
+      </div>
         </div>
 
         {/* services */}
