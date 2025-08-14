@@ -103,4 +103,13 @@ footer {
   
   .footer__subscribe button:hover {
     background-color: #ff6347;
-  }  
+  }
+
+/* Ensure slick carousel handles overflow */
+.slick-list {
+    overflow: hidden;
+}
+
+.slick-track {
+    display: flex;
+}

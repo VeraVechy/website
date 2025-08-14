@@ -25,7 +25,7 @@ function Form() {
               </div>
             </div>
 
-            <textarea name="message" className="form-control mt-3" placeholder='Enter your message here' cols="30" rows="10" required></textarea>
+            <textarea name="message" className="form-control mt-3" placeholder='Enter your message here' rows="10" required></textarea>
             
             <div className="mt-3">
               <button type="submit" className="btn btn-danger">Submit</button>

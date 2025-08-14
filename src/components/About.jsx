@@ -93,7 +93,7 @@ const settings = {
       <Slider {...settings}>
         {cardsData.map((card, index) => (
           <div key={index} className="col-md-4 mb-5">
-             <div className="slider-item" style={{ marginRight: '1rem' }}>
+             <div className="slider-item">
              <div className="card">
               <img src={card.image} className="card-img-top" alt="..." />
               <div className="card-body">

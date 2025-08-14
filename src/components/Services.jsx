@@ -133,7 +133,7 @@ function Services() {
       <Slider {...settings}>
         {cardsData1.map((card, index) => (
           <div key={index} className="col-md-4 mb-5">
-             <div className="slider-item" style={{ marginRight: '1rem' }}>
+             <div className="slider-item">
              <div className="card">
               <img src={card.image} className="card-img-top img-fluid" alt="..." />
               </div>
