@@ -25,10 +25,7 @@ import pic15 from '../assets/VGDC/15.jpg';
 // import pic21 from '../assets/VGDC/21.jpg';
 // import pic22 from '../assets/VGDC/22.jpg';
 // import pic23 from '../assets/VGDC/23.jpg';
-import Win from '../assets/VGDC/winner.png';
-import Vgdc from '../assets/VGDC/vgdc.png';
-import FAQ from './FAQ'
-
+import Win from '../assets/VGDC/winner.jpg';
 
 
 function VGDC() {
@@ -100,30 +97,27 @@ function VGDC() {
             </div>
         </div>
 
-        <div className='containerr'>
-      <div className='text-center' data-aos='fade-up'>
-        <h2 className='pt-4'>Vechy Graphix Design Challenge </h2>
+        <div className='text-center'>
+      <div className='ab text-center' data-aos='fade-up'>
+        <h2 className='pt-4'>Vechy Graphix Design Challenge</h2>
         <div className="under mt-3 ml-0"></div>
-        <p className='mt-3'>Unleash your creativity and explore boundless possibilities with our innovative platform  </p>
-      </div>
+        <p className='mt-3'> A proud initiative of Vechy Graphix Group </p>
       </div>
 
-      <div className="container d-flex">
-        <div className="row mt-5">
+        
+        <div className="row">
         <div className="col-md-6" data-aos="fade-up">
-        <img src={Vgdc} className='rounded img-fluid pb-5' style={{height:'86%', width:'95%'}} alt="Winner" srcSet=''/>
-      </div>
-
-
-        <div className="col-md-6" data-aos="fade-up">
-        <p className='text-danger'>CHALLENGE OVERVIEW </p>
-          <h2 className=''>An Esteemed Venture by Vechy Graphix Ltd</h2>
-          <p>Welcome to the Vechy Graphix Design Challenge, where the worlds of graphic design and web development converge in an exciting showcase of creativity and technical prowess. This challenge offers a unique platform for designers and developers alike to demonstrate their skills and passion for crafting visually stunning and functional digital experiences. From eye-catching graphics to seamless user interfaces, participants will have the opportunity to flex their creative muscles and showcase their expertise across various mediums. Throughout the challenge, participants will not only have the chance to create captivating designs but also to bring them to life through immersive web development. Join us on this exhilarating journey of innovation, collaboration, and mastery in both graphic design and web development!</p>
-          <a href="/contact" className="btn btn-danger">Register Now </a>
+          <div className='vech'>
+          <p className='text-danger'>ALL ABOUT THE CHALLENGE </p>
+          <h2>Graphic Designs, Branding, Consultations, And More</h2>
+          <p>Our vision is rooted in the belief that every brand has a story worth telling, and it's our mission to bring those stories to life with authenticity, passion, and unparalleled creativity. We envision a future where design transcends mere aesthetics, where it becomes a catalyst for meaningful connection and positive change. Through our dedication to excellence and our relentless pursuit of innovation, we aim to empower brands to make a lasting impact in the world, one pixel at a time.</p>
+          <a href="/contact" className="btn btn-danger">Participate </a>
           </div>
         </div>
         </div>
-<FAQ/>
+        </div>
+
+
 
         <div className="pt-5 text-center">
       <div className="bg-primary mt-5 mt-5" style={{ minHeight: '200px', padding: '20px 0' }}>
@@ -153,40 +147,18 @@ function VGDC() {
       </section>
     </div>
 
-
-          <div className="container d-flex">
-          <div className="row mt-5">
-      <div className="col-md-6"  data-aos="fade-up">
-          <img src={Win} className="rounded img-fluid mb-5" alt="About" />
-          </div>
-        
-
-        
-        <div className="col-md-6 justify-content-left" data-aos="fade-up">
-          <h3 className='text-danger'>A Message From Winner of Season 1</h3>
-          <p>
-The challenge was really tough. You were given a task at night to submit the next day by 6:30 p.m. It was not easy for me. There were some days I felt like giving up. I would just say to myself, "No way, I'm not giving up on this." I joined this challenge to improve my design skills. It made me take my time to research more for each task given.
-
-As the winner of this edition, I want to let you know that you can participate in that challenge you have been dreaming of. Just step out of your comfort zone, and believe me, you won't regret it. Stay tuned for the next edition. I believe you won't want to miss it.
-
-See you there! 
-
-Thank you to the organizers @vechygraphix.</p>
-<div>
-            <h5>MS. NNEOMA IKENWA CHINAZA</h5>
+        <div className="container mt-5 mb-3">
+            <div className="row">
+              
+                <div className="col-md-6" data-aos="fade-up">
+                    <h3>Let's Hear From The Winner of Season 1 </h3>
+                
+                <div className="rounded img-fluid mx-auto" >
+                    <img src={Win} alt="Winner" srcSet=''/>
+                </div>
+                </div>        
             </div>
-          </div>
-        </div>
-        </div>
-        <div className="text-center" data-aos='fade-up'>
-      <a href="/contact" className="btn btn-danger">Register Now</a>
-    </div>
-    {/* </div> */}
-
-      
-
-
-       
+            </div>
     </>
   )
 }
