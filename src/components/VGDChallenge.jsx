@@ -25,8 +25,8 @@ import pic15 from '../assets/VGDC/15.jpg';
 // import pic21 from '../assets/VGDC/21.jpg';
 // import pic22 from '../assets/VGDC/22.jpg';
 // import pic23 from '../assets/VGDC/23.jpg';
-import Win from '../assets/VGDC/winner.jpg';
-import Vgdc from '../assets/VGDC/Vgdc.png';
+import Win from '../assets/VGDC/winner.png';
+import Vgdc from '../assets/VGDC/vgdc.png';
 import FAQ from './FAQ'
 
 
